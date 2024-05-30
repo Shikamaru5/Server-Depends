@@ -26,8 +26,20 @@ pip3 install tensorflow
 # Install PyTorch (compatible with CUDA 12)
 pip3 install torch torchvision torchaudio
 # Install other Python packages
-pip3 install numpy python-pandas matplotlib tqdm pexpect opencv-python deepspeed transformers einops pycocotools kornia beartype datasets click sentencepiece enum typing
+pip3 install --upgrade numpy python-pandas matplotlib tqdm pexpect opencv-python deepspeed transformers einops pycocotools kornia beartype datasets click sentencepiece enum typing flatbuffers
 # Optional: Additional packages mentioned
-pip3 install xml pathlib striprtf ast copy math contextlib functools collections pytorch_warmup lion_pytorch packaging ema_pytorch fsspec scipy csv re triton pydantic paramiko
+pip3 install --upgrade xml pathlib striprtf ast copy math contextlib functools collections pytorch_warmup lion_pytorch packaging ema_pytorch fsspec scipy csv re triton pydantic paramiko
+
+pip3 install --upgrade deepspeed transformers einops pycocotools kornia beartype datasets sentencepiece striprtf pytorch_warmup lion_pytorch ema_pytorch
+
+sudo systemctl restart nvidia-persistenced
+
+sudo apt install --reinstall nvidia-driver-555
+
+sudo apt update
+sudo apt upgrade nvidia-driver-555
+
+sudo apt-get update
+
 # Reboot
-reboot
+sudo reboot
